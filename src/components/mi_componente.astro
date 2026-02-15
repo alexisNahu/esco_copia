@@ -1,0 +1,20 @@
+---
+import '../styles/global.css'
+
+interface Props {
+    titulo: string,
+    nombre: string,
+    image?: string
+}
+
+const {titulo, nombre, image='assets/astro.svg'} = Astro.props
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+---
+
+<div>
+    <p>Hola, esta es la pagina de {nombre}</p>
+    <p>Con el titulo de {titulo}</p>
+</div>
+
+
+
