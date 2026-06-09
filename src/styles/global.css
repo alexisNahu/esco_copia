@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@theme {
+    --color-lila-esco: #5B1954;
+
+    --font-sans: "REM", sans-serif;
+}
+
+@layer base {
+    @font-face {
+        font-family: 'REM';
+        src: url('../assets/fonts/REM/REM-VariableFont_wght.ttf') format('truetype');
+        font-weight: 200 800;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    .marg {
+        @apply max-w-[1400px]
+    }
+}
