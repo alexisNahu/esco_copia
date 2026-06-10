@@ -359,7 +359,9 @@ const servicios = [
 							type="tel"
 							name="telefono"
 							required
-							placeholder="Tel:"
+							pattern="[0-9]{6,15}"
+							title="Por favor, ingresa un número de teléfono válido (solo números, entre 6 y 15 dígitos)"
+							placeholder="Tel: (ej. 0991123456)"
 							class="w-full sm:w-1/2 px-4 h-[40px] text-lila-esco rounded-full border-2 border-lila-esco focus:outline-none transition-all placeholder:text-lila-esco placeholder:text-sm"
 						/>
 						<input
