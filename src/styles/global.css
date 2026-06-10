@@ -16,6 +16,6 @@
     }
 
     .marg {
-        @apply max-w-[1550px]
+        @apply max-w-[1920px]
     }
 }

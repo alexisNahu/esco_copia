@@ -2,12 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import Banner from "../components/Banner.astro";
 import Nav from "../components/Nav.astro";
+import star3 from '../assets/star3.png'
 import flecha from '../assets/flecha.png'
 import calculadora from '../assets/calculadora.png'
 import check from '../assets/check.png'
 import {Image} from "astro:assets";
 import logo from '../assets/logo_blanco.png';
-import profesional from '../assets/seniora.png'
+import estrellita from '../assets/estrellita.png';
+import profesional from '../assets/transformamos.png'
 import star1 from '../assets/star.png'
 import elipse1 from '../assets/ellipse1.png'
 import elipse2 from '../assets/ellipse2.png'
@@ -52,9 +54,9 @@ const servicios = [
 ---
 
 <Layout>
-		<Banner/>
+	<Banner/>
 
-	<section class="bg-gray-50 py-8 px-10 -mt-[585px] bg-transparent z-10 relative">
+	<!--<section class="bg-gray-50 py-8 px-10 -mt-[585px] bg-transparent z-10 relative">
 		<div class="flex items-center">
 			<Image src={flecha} alt="Flecha" />
 
@@ -74,11 +76,17 @@ const servicios = [
 				</a>
 			</div>
 		</div>
+	</section>-->
+
+	<section class="bg-gray-50 py-8 px-10 -mt-[585px] bg-transparent z-10 relative">
+		<div class="marg mx-auto flex items-center">
+			<Image src={flecha} alt="Flecha" class="absolute  left-0"/>
+		</div>
 	</section>
 
 
 	<section class="py-12 bg-lila-esco px-6 mt-11">
-		<div class="marg mx-auto md:text-[24px]">
+		<div class="max-w-[1170px] text-justify mx-auto md:text-[24px]">
 			<p class="text-white text-lg md:text-xl leading-relaxed font-light">
 				<strong class="font-bold">ESCO - Estudio Contable S.R.L.</strong> nace a partir de la sólida trayectoria profesional de sus fundadores, quienes han desarrollado durante años una destacada labor en el asesoramiento contable, tributario y financiero a empresas de diversos sectores económicos.
 				<strong class="font-bold">Su creación responde a la necesidad de ofrecer a personas, emprendedores y empresarios un acompañamiento técnico confiable, ético y orientado a resultados,</strong> sustentado en la experiencia acumulada de sus socios.
@@ -86,43 +94,52 @@ const servicios = [
 		</div>
 	</section>
 
-	<section class="relative w-full overflow-hidden bg-gradient-to-r from-purple-100 to-white py-20 flex items-center h-[1100px]">
-		<div class="absolute h-full left-10 top-0 bottom-0 z-0 hidden md:block">
+	<section class="relative w-full py-20 flex items-center h-[1100px]">
+		<div class="absolute left-20 top-0 h-full z-0 hidden md:block">
 			<Image
 				src={profesional}
 				alt="Profesional contable"
-				class="h-full w-auto object-cover object-right"
+				class="h-full w-auto object-right"
 			/>
 		</div>
 
-		<div class="absolute right-10 md:right-0 top-20 z-0">
-			<Image src={star2} alt="Star 2" class="w-24 md:w-32 h-auto" />
-		</div>
 
-		<div class="marg mx-auto relative z-10 w-full px-10">
-			<div class="marg">
+
+		<div class="marg mx-auto relative z-10 w-full px-10 left-39 -top-[70px]">
+			<div>
 				<h1 class="text-[95px] uppercase leading-tight text-lila-esco relative">
 					<span class="italic font-bold border-b-1">Transformamos</span> <br />
 					<span class="italic border-b-1">Números en</span> <br />
 					<span class="italic font-bold">Decisiones</span> <br />
 					que <span class="italic font-bold">Hacen</span> <br />
 
-					<span class="border-2 border-[--color-lila-esco] pl-4 pr-6 py-1 rounded-full inline-flex items-center justify-start leading-none">
-						<span class="italic">Crecer</span>
+					<span class="border-4 border-lila-esco pl-6 pr-11 py-2 rounded-full inline-flex items-center justify-start leading-none">
+						<span class="italic font-bold">Crecer</span>
 					</span>
 
-					<Image
-						src={star1}
-						alt="star1"
-						class="absolute -top-10 right-[1450px] w-16 md:w-56"
-					/>
+
 				</h1>
 			</div>
+
+
 		</div>
+		<Image
+			src={star1}
+			alt="star1"
+			class="absolute -bottom-36 w-16 md:w-80"
+		/>
+
+		<Image
+			src={star2}
+			alt="star1"
+			class="absolute right-0 -bottom-36 w-16 md:w-36"
+		/>
 	</section>
 
+
+
 	<section class="py-20 px-6 bg-white" id="nosotros">
-		<div class="marg text-lila-esco mx-auto grid grid-cols-1 md:text-[20px] md:grid-cols-2 gap-16">
+		<div class="max-w-[1200px] text-lila-esco mx-auto w-full justify-items-center grid grid-cols-1 md:text-[20px] md:grid-cols-2 gap-16">
 			<div class="flex flex-col gap-4">
 				<h2 class="text-4xl font-semibold md:text-[60px] uppercase tracking-wide">Misión</h2>
 				<p class="max-w-[500px]">Apoyar a las personas, emprendedores y empresas en su búsqueda de diferenciación competitiva, brindando servicios e información oportuna y de calidad para la toma de decisiones.</p>
@@ -134,7 +151,7 @@ const servicios = [
 		</div>
 	</section>
 
-	<section class="relative w-full py-24 px-6 bg-white">
+	<section class="relative w-full px-6 bg-white">
 		<Image
 			src={elipse1}
 			alt="star1"
@@ -151,30 +168,39 @@ const servicios = [
 				<Image src={arco} alt="Arco de valores" class="w-full h-auto object-contain" />
 			</div>
 
-			<div class="relative w-full h-[300px] mt-28 z-10">
-				<span class="absolute top-[180px] left-[5%] md:left-[15%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">COMPROMISO</span>
-				<span class="absolute top-[80px] left-[18%] md:left-[22%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">CONFIDENCIALIDAD</span>
-				<span class="absolute top-[5px] left-[35%] md:left-[38%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">LEALTAD</span>
-				<span class="absolute top-[5px] right-[35%] md:right-[38%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">HONESTIDAD</span>
+			<div class="relative w-full h-[300px] mt-28 z-10 text-[24px] font-medium">
+				<span class="absolute top-[190px] left-[5%] md:left-[11%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">COMPROMISO</span>
+				<span class="absolute top-[80px] left-[18%] md:left-[18%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">CONFIDENCIALIDAD</span>
+				<span class="absolute top-[5px] left-[35%] md:left-[36%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">LEALTAD</span>
+				<span class="absolute top-[5px] right-[35%] md:right-[36%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">HONESTIDAD</span>
 				<span class="absolute top-[80px] right-[18%] md:right-[22%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">DEDICACIÓN</span>
-				<span class="absolute top-[180px] right-[5%] md:right-[10%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">TRABAJO EN EQUIPO</span>
+				<span class="absolute top-[190px] right-[5%] md:right-[10%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">TRABAJO EN EQUIPO</span>
 			</div>
 
-			<h2 class="text-5xl font-extrabold text-lila-esco uppercase text-center mb-16 z-20 -mt-[156px]">
+			<div class="absolute top-11 right-[350px] z-50 w-96 h-96">
+				<Image
+					src={estrellita}
+					alt="Arco de valores"
+					class="absolute top-0 right-0 w-32 h-32"
+				/>
+			</div>
+			<h2 class="md:text-[60px] font-semibold text-lila-esco uppercase text-center mb-16 z-20 -mt-[156px] leading-[60px]">
 				Nuestros <br /> Valores
 			</h2>
 		</div>
 	</section>
 
-	<section class="py-20 px-6 bg-lila-esco" id="servicios">
-		<div class="marg mx-auto">
+	<section class="py-20 bg-lila-esco w-full overflow-hidden" id="servicios">
+		<div class="max-w-[1750px] mx-auto px-6">
 			<h2 class="text-5xl font-extrabold text-white uppercase text-center mb-16 tracking-wide">
 				Servicios
 			</h2>
-			<div class="flex flex-wrap justify-items-center justify-center">
+			<div class="flex flex-wrap justify-items-center justify-center -mx-2">
 				{servicios.map((servicio) => (
-					<div class="border-2 border-white/20 rounded-3xl p-8 hover:bg-white/5 transition-all w-full max-w-md mx-2 mb-16">
-						<div class="mb-6 border-2 border-white/20 rounded-[100px] relative bottom-[80px] w-fit px-6 py-3 bg-lila-esco">
+					<div class="border-2 border-white/20 rounded-3xl py-11 px-6 hover:bg-white/5 transition-all w-full max-w-[520px] mx-2 mb-16 relative">
+
+						<!-- Ícono arriba a la izquierda -->
+						<div class="absolute -top-8 left-6 border-2 border-white/20 rounded-full px-6 py-3 bg-lila-esco">
 							<Image
 								src={servicio.icono}
 								alt={servicio.titulo}
@@ -182,34 +208,36 @@ const servicios = [
 							/>
 						</div>
 
-						<h3 class="text-2xl font-bold text-white uppercase mb-6 leading-tight">
-							{servicio.titulo}
-						</h3>
+						<!-- Contenido -->
+						<div class="mt-10 flex flex-col">
+							<h3 class="text-2xl md:text-[24px] font-black text-white uppercase mb-4 leading-tight h-[110px] text-center max-w-[180px] mx-auto">
+								{servicio.titulo}
+							</h3>
 
-						<ul class="space-y-3">
-							{servicio.items.map((item) => (
-								<li class="text-white/80 flex items-start gap-2">
-									<span class="text-white mt-1">◆</span> {item}
-								</li>
-							))}
-						</ul>
+							<ul class="space-y-3">
+								{servicio.items.map((item) => (
+									<li class="text-white/80 flex text-[20px] items-start gap-2">
+										<span class="text-white  mt-1">◆</span> {item}
+									</li>
+								))}
+							</ul>
+						</div>
 					</div>
 				))}
 			</div>
 		</div>
 	</section>
 
-	<section class="relative py-24 px-6 overflow-hidden">
-		<!-- Imagen a la derecha, sin overlay -->
+	<section class="relative h-[410px] max-w-[1750px] px-6 overflow-hidden flex items-center">		<!-- Imagen a la derecha, sin overlay -->
 		<img
 			src={calculadora.src}
 			alt=""
-			class="absolute right-0 top-0 h-full w-auto object-cover pointer-events-none"
+			class="absolute right-0 top-0 h-full w-auto pointer-events-none"
 		/>
 
 		<div class="marg mx-auto flex flex-row gap-20 items-center relative z-10">
-			<h2 class="text-6xl md:text-[60px] italic text-lila-esco uppercase leading-tight">
-				¿Por qué <br /> <span class="font-bold">elegirnos?</span>
+			<h2 class="text-6xl md:text-[60px] italic text-lila-esco uppercase leading-tight font-bold">
+				¿Por qué <br /> <strong>elegirnos?</strong>
 			</h2>
 
 			<div class="flex flex-col w-full gap-3 text-[24px]">
@@ -230,7 +258,7 @@ const servicios = [
 				</p>
 			</div>
 			<div>
-				<Image src={check} alt="check" class="relative -top-[90px] right-[90px] w-56"/>
+				<Image src={check} alt="check" class="relative -top-[90px] right-[180px] w-80"/>
 			</div>
 		</div>
 	</section>
@@ -244,7 +272,6 @@ const servicios = [
 
 
 					<Image src={fotoSocio} alt="Salvador R. Maldonado Díaz" class="absolute inset-0 w-full h-full object-cover" />
-					<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
 
 					<div class="absolute top-40 left-16 z-10">
 						<p class="text-white font-bold text-[36px] uppercase italic leading-tight">
@@ -255,7 +282,7 @@ const servicios = [
 
 
 					<div class="absolute bottom-0 w-full py-6 text-center z-10">
-						<p class="text-white tracking-[0.2em] uppercase text-xl font-medium">Socio Fundador</p>
+						<p class="text-white uppercase text-[40px]">Socio Fundador</p>
 					</div>
 
 				</div>
@@ -265,11 +292,11 @@ const servicios = [
 				<Image src={flecha} alt="flecha" class="w-36 h-auto" />
 			</div>
 
-			<div class="w-full lg:w-[50%] flex flex-col gap-6 text-[20px] text-lila-esco max-w-[635px] justify-center text-justify mx-auto">
+			<div class="w-full lg:w-[50%] flex flex-col gap-6 pr-11 text-[20px] text-lila-esco max-w-[730px] justify-center text-justify mx-auto">
 				<Image
-					src={star1}
+					src={star3}
 					alt="star1"
-					class="absolute rotate-180 right-0 -top-24 w-16 md:w-52"
+					class="absolute right-0 -top-44 w-16 md:w-64"
 				/>
 
 
@@ -293,9 +320,9 @@ const servicios = [
 					class="absolute left-[0px] top-[10px] w-16 md:w-52 z-50"
 				/>
 				<Image
-					src={star1}
+					src={star3}
 					alt="star1"
-					class="absolute left-[0px] top-[800px] w-16 md:w-52 z-50"
+					class="absolute left-[0px] rotate-180 top-[800px] w-16 md:w-52 z-50 pl-11"
 				/>
 				Contadora Pública Nacional egresada de la Universidad Nacional de Asunción, con sólida formación en tributación, costos, presupuestos, auditoría, cumplimiento SEPRELAD y liderazgo empresarial. Integra el equipo fundador de ESCO Estudio Contable S.R.L., donde lidera los servicios de contabilidad, liquidación de impuestos y asesoría a empresas y personas en Paraguay. Especializada en el cumplimiento de obligaciones ante la SET, manejo del régimen de IVA, IRE, IRP y normativa tributaria vigente. Su enfoque práctico y orientado al cliente garantiza información clara y oportuna para la toma de decisiones. Combina conocimiento técnico actualizado con una atención personalizada que distingue a ESCO en el mercado. Comprometida con la excelencia profesional y el acompañamiento cercano a cada cliente en todas las etapas de su negocio.
 			</div>
@@ -309,8 +336,6 @@ const servicios = [
 				<div class="relative w-full aspect-[4/5] overflow-hidden shadow-2xl border-gray-100">
 					<Image src={viviana} alt="Viviana R. Maldonado López" class="absolute inset-0 w-full h-full object-cover" />
 
-					<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-
 					<div class="absolute top-40 left-16 z-10">
 						<p class="text-white font-bold text-[36px] uppercase italic leading-tight">
 							C.P. <br /> Viviana R. <br /> Maldonado <br/> López
@@ -318,7 +343,7 @@ const servicios = [
 					</div>
 
 					<div class="absolute bottom-0 w-full py-6 text-center z-10">
-						<p class="text-white tracking-[0.2em] uppercase text-xl font-medium">Socia</p>
+						<p class="text-white uppercase text-[40px]">Socia</p>
 					</div>
 				</div>
 			</div>
@@ -329,8 +354,8 @@ const servicios = [
 		</div>
 	</section>
 
-	<section class="py-24 bg-white" id="contacto">
-		<div class="marg mx-auto flex flex-col justify-between lg:flex-row gap-16 items-center">
+	<section class="max-w-[1550px] mx-auto py-24 bg-white" id="contacto">
+		<div class=" flex flex-col justify-between lg:flex-row gap-16 items-center">
 
 			<div class="max-w-[443px]">
 				<h2 class="text-4xl italic font-bold text-lila-esco mb-4 uppercase">OPTIMIZÁ TUS IMPUESTOS <strong>HOY</strong></h2>
