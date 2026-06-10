@@ -2,24 +2,28 @@
 import BaseHead from "../components/BaseHead.astro";
 const {title, description, image="/img.png"} = Astro.props
 import '../styles/global.css'
-import Nav from "../components/Nav.astro";
 ---
 <!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={title} description={description} image={image}/>
-	</head>
-	<body class="overflow-x-hidden">
-		<slot />
-	</body>
-	<div
-		class="bg-white text-secundario py-2 text-center text-[12px]"
-	>
-    <span
-	>Diseño y Desarrollo Web por <a
-		href="https://www.fincreativo.com/"
-		target="_blank">FINCREATIVO</a
-	></span
-	>
-	</div>
+<html lang="es"> <head>
+	<BaseHead title={title} description={description} image={image}/>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SNNNN8YX3C"></script>
+	<script is:inline>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-SNNNN8YX3C');
+	</script>
+</head>
+<body class="overflow-x-hidden">
+<slot />
+
+<div class="bg-white text-secundario py-2 text-center text-[12px]">
+          <span>
+             Diseño y Desarrollo Web por
+             <a href="https://www.fincreativo.com/" target="_blank" class="hover:underline">FINCREATIVO</a>
+          </span>
+</div>
+</body>
 </html>

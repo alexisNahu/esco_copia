@@ -338,13 +338,13 @@ const servicios = [
 			<div class="max-w-[443px] w-full">
 				<h2 class="text-2xl md:text-4xl italic font-bold text-lila-esco mb-4 uppercase text-center md:text-left">OPTIMIZÁ TUS IMPUESTOS <strong>HOY</strong></h2>
 				<p class="text-lila-esco mb-6 md:mb-8 text-base md:text-[20px] text-center md:text-left">Queremos ser aliados estratégicos en el crecimiento y control financiero de tu empresa.</p>
-
 				<form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-4">
 
 					<input type="hidden" name="access_key" value="7d1fdf7a-5971-4335-866e-23e7c9592352" />
-
 					<input type="hidden" name="subject" value="Nuevo contacto desde la Web - ESCO" />
 					<input type="hidden" name="from_name" value="Web ESCO Estudio Contable" />
+
+					<input type="hidden" name="language" value="es" />
 
 					<input
 						type="text"
@@ -361,7 +361,7 @@ const servicios = [
 							required
 							pattern="[0-9]{6,15}"
 							title="Por favor, ingresa un número de teléfono válido (solo números, entre 6 y 15 dígitos)"
-							placeholder="Tel: (ej. 0991123456)"
+							placeholder="Tel: (ej. 0981123456)"
 							class="w-full sm:w-1/2 px-4 h-[40px] text-lila-esco rounded-full border-2 border-lila-esco focus:outline-none transition-all placeholder:text-lila-esco placeholder:text-sm"
 						/>
 						<input
@@ -390,18 +390,14 @@ const servicios = [
 			<div class="w-full lg:w-1/2 flex flex-col items-center">
 				<h2 class="text-2xl md:text-[40px] text-lila-esco mb-4 md:mb-6 self-start italic text-center md:text-left w-full">¡Encontranos <strong>aquí!</strong></h2>
 
-				<div class="relative w-full aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-100 group">
-					<Image
-						src={mapaGps}
-						alt="Ubicación de ESCO Estudio Contable"
-						class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-					/>
-
-					<div class="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-						<a href="https://maps.app.goo.gl/rbP5kRWrdpn5R2BeA" target="_blank" class="bg-white text-lila-esco px-4 md:px-6 py-2 rounded-full font-bold shadow-xl text-sm md:text-base">
-							Abrir en Google Maps
-						</a>
-					</div>
+				<div class="w-full aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-100">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.447547434526!2d-56.443916!3d-25.440049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDI2JzI0LjIiUyA1NsKwMjYnMzguMSJX!5e0!3m2!1ses!2spy!4v1710000000000!5m2!1ses!2spy"
+						class="w-full h-full border-0"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+					></iframe>
 				</div>
 			</div>
 		</div>
