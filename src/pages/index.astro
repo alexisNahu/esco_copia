@@ -57,12 +57,12 @@ const servicios = [
 <Layout>
 	<Banner/>
 
-	<section class="bg-gray-50 -mt-[585px] bg-transparent z-10 relative">
+	<section class="bg-gray-50 -mt-[180px] bg-transparent z-10 relative">
 		<div class="flex items-center">
-			<Image src={flecha} alt="Flecha" class="relative -left-10"/>
+			<Image src={flecha} alt="Flecha" class="relative -left-10 hidden md:flex"/>
 
-			<div class="flex flex-row justify-between w-full px-16 items-center">
-				<div class="flex items-center justify-between gap-8">
+			<div class="flex flex-row justify-center md:justify-between w-full px-16 items-center">
+				<div class="items-center justify-between gap-8 hidden md:flex">
 					<h2 class="text-3xl md:text-[45px] text-lila-esco uppercase">
 					</h2>
 				</div>
@@ -70,7 +70,7 @@ const servicios = [
 				<a
 					href="https://wa.me/TUNUMERO"
 					target="_blank"
-					class="border-2 border-lila-esco max-h-[60px] px-6 text-lila-esco md:text-[32px] rounded-full hover:bg-lila-esco hover:text-white transition-all"
+					class="border-2 border-lila-esco h-[60px] px-6 text-lila-esco md:text-[32px] items-center flex text-[25px] rounded-full hover:bg-lila-esco hover:text-white transition-all whitespace-nowrap"
 				>
 					Hablemos por <span class="font-bold">WhatsApp</span>
 				</a>
@@ -89,52 +89,46 @@ const servicios = [
 			</p>
 		</div>
 	</section>
-
-	<section class="relative w-full flex items-center h-[1100px] overflow-hidden">
-		<div class="absolute left-20 -top-[350px] h-full z-0 hidden md:block">
+	<section class="relative w-full flex items-center md:h-[1100px] h-[1040px] overflow-hidden min-w-[1486px]">
+		<div class="absolute lg:left-20 md:-top-[350px] -top-[350px] h-full z-0 block w-full md:w-auto">
 			<Image
 				src={profesional}
 				alt="Profesional contable"
-				class="h-full w-auto object-right"
+				class="h-[900px] lg:h-full w-auto object-contain md:object-center"
 			/>
 		</div>
 
-
-
-		<div class="marg mx-auto relative z-10 w-full px-10 left-39 -top-[250px]">
+		<div class="marg mx-auto relative z-10 w-full px-10 lg:left-39 lg:-top-[250px] -top-[290px]">
 			<div>
-				<h1 class="text-[70px] uppercase leading-tight text-lila-esco relative">
+				<h1 class="uppercase leading-tight text-lila-esco relative text-[38px] sm:text-5xl md:text-6xl lg:text-[72px]">
 					<span class="italic font-bold border-b-1">Transformamos</span> <br />
 					<span class="italic border-b-1">Números en</span> <br />
 					<span class="italic font-bold">Decisiones</span> <br />
 					que <span class="italic font-bold">Hacen</span> <br />
 
-					<span class="border-4 border-lila-esco pl-6 pr-11 py-2 rounded-full inline-flex items-center justify-start leading-none">
-						<span class="italic font-bold">Crecer</span>
-					</span>
-
-
+					<span class="border-2 md:border-4 border-lila-esco pl-4 lg:pl-6 pr-6 lg:pr-11 py-1 lg:py-2 rounded-full inline-flex items-center justify-start leading-none mt-2">
+          <span class="italic font-bold text-[38px] sm:text-5xl md:text-6xl lg:text-[72px]">Crecer</span>
+       </span>
 				</h1>
 			</div>
-
-
 		</div>
+
 		<Image
 			src={star1}
 			alt="star1"
-			class="absolute bottom-50 -left-[100px] w-16 md:w-80"
+			class="absolute hidden lg:flex bottom-50 -left-[100px] w-16 md:w-80"
 		/>
 
 		<Image
 			src={star2}
 			alt="star1"
-			class="absolute right-0 bottom-[850px] w-16 md:w-36"
+			class="absolute right-0 bottom-[630px] md:bottom-[850px] w-24 md:w-36"
 		/>
 	</section>
 
 
 
-	<section class="py-20 px-6 bg-white -mt-72">
+	<section class="py-20 px-6 bg-white lg:-mt-72 -mt-[500px]">
 		<div class="max-w-[1200px] text-lila-esco mx-auto w-full justify-items-center grid grid-cols-1 md:text-[20px] md:grid-cols-2 gap-16">
 			<div class="flex flex-col gap-4">
 				<h2 class="text-4xl font-semibold md:text-[60px] uppercase tracking-wide">Misión</h2>
@@ -146,47 +140,54 @@ const servicios = [
 			</div>
 		</div>
 	</section>
-
-	<section class="relative w-full px-6 bg-white">
+	<section class="relative w-full px-4 md:px-6 bg-white">
 		<Image
 			src={elipse1}
 			alt="star1"
-			class="absolute left-0 bottom-1 w-16 md:w-96"
+			class="absolute left-0 bottom-1 w-16 md:w-96 opacity-50 md:opacity-100"
 		/>
 		<Image
 			src={elipse2}
 			alt="star1"
-			class="absolute right-0 -top-56 w-16 md:w-96"
+			class="absolute right-0 -top-56 w-16 md:w-96 opacity-50 md:opacity-100"
 		/>
 		<div class="mx-auto relative flex flex-col items-center">
 
-			<div class="absolute top-10 w-full z-0">
+			<div class="absolute top-10 w-full z-0 hidden min-[1510px]:block">
 				<Image src={arco} alt="Arco de valores" class="w-full h-auto object-contain" />
 			</div>
 
-			<div class="relative w-full h-[300px] mt-28 z-10 text-[24px] font-medium">
-				<span class="absolute top-[190px] left-[5%] md:left-[11%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">COMPROMISO</span>
-				<span class="absolute top-[80px] left-[18%] md:left-[18%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">CONFIDENCIALIDAD</span>
-				<span class="absolute top-[5px] left-[35%] md:left-[36%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">LEALTAD</span>
-				<span class="absolute top-[5px] right-[35%] md:right-[36%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">HONESTIDAD</span>
-				<span class="absolute top-[80px] right-[18%] md:right-[22%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">DEDICACIÓN</span>
-				<span class="absolute top-[190px] right-[5%] md:right-[10%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">TRABAJO EN EQUIPO</span>
+			<div class="relative w-full min-[1511px]:hidden flex flex-col items-center gap-4 mt-28 mb-8 z-10">
+				<span class="border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold text-sm whitespace-nowrap">COMPROMISO</span>
+				<span class="border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold text-sm whitespace-nowrap">CONFIDENCIALIDAD</span>
+				<span class="border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold text-sm whitespace-nowrap">LEALTAD</span>
+				<span class="border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold text-sm whitespace-nowrap">HONESTIDAD</span>
+				<span class="border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold text-sm whitespace-nowrap">DEDICACIÓN</span>
+				<span class="border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold text-sm whitespace-nowrap">TRABAJO EN EQUIPO</span>
 			</div>
 
-			<div class="absolute top-11 right-[350px] z-50 w-96 h-96">
+			<div class="relative w-full h-[300px] mt-28 z-10 text-[24px] font-medium hidden min-[1510px]:block">
+				<span class="absolute top-[190px] left-[11%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">COMPROMISO</span>
+				<span class="absolute top-[80px] left-[18%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">CONFIDENCIALIDAD</span>
+				<span class="absolute top-[5px] left-[36%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">LEALTAD</span>
+				<span class="absolute top-[5px] right-[36%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">HONESTIDAD</span>
+				<span class="absolute top-[80px] right-[22%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">DEDICACIÓN</span>
+				<span class="absolute top-[190px] right-[10%] border-2 border-lila-esco text-lila-esco px-6 py-2 rounded-full bg-white font-bold transition-transform hover:scale-105">TRABAJO EN EQUIPO</span>
+			</div>
+
+			<div class="absolute top-11 right-[350px] z-50 w-96 h-96 hidden md:block">
 				<Image
 					src={estrellita}
 					alt="Arco de valores"
 					class="absolute top-0 right-0 w-32 h-32"
 				/>
 			</div>
-			<h2 class="md:text-[60px] font-semibold text-lila-esco uppercase text-center mb-16 z-20 -mt-[200px] leading-[60px]">
-				Nuestros <br /> Valores
+			<h2 class="text-3xl md:text-[60px] font-semibold text-lila-esco uppercase text-center mb-16 z-20 -mt-[500px] min-[1510px]:-mt-[200px] leading-[50px] md:leading-[60px]">				Nuestros <br /> Valores
 			</h2>
 		</div>
 	</section>
 
-	<section class="py-20 bg-lila-esco w-full overflow-hidden mt-11" id="servicios">
+	<section class="py-20 bg-lila-esco w-full overflow-hidden mt-[480px] min-[1510px]:mt-16" id="servicios">
 		<div class="max-w-[1750px] mx-auto px-6">
 			<h2 class="text-5xl font-extrabold text-white uppercase text-center mb-16 tracking-wide">
 				Servicios
@@ -224,160 +225,169 @@ const servicios = [
 		</div>
 	</section>
 
-	<section
-		class=" relative h-[410px] w-full overflow-hidden bg-[url('../assets/calculadora.png')]"
-	>
-		<div class="max-w-[1550px] mx-auto flex flex-row gap-20 items-center h-full relative z-10 font-bold">
-			<h2 class="text-6xl md:text-[60px] italic text-lila-esco uppercase leading-tight font-bold">
+	<section class="relative min-h-[410px] h-auto md:h-[410px] w-full overflow-hidden bg-[url('../assets/calculadora.png')] bg-cover bg-center">
+		<!-- Overlay para móvil -->
+		<div class="absolute inset-0 bg-white/70 md:bg-transparent"></div>
+
+		<div class="max-w-[1550px] mx-auto flex flex-col md:flex-row gap-6 md:gap-20 items-center h-full relative z-10 font-bold py-10 md:py-0 px-4 md:px-6">
+			<h2 class="text-3xl md:text-6xl italic text-lila-esco uppercase leading-tight font-bold text-center md:text-left">
 				¿Por qué <br /> <strong>elegirnos?</strong>
 			</h2>
 
-			<div class="flex flex-col w-full gap-3 text-[24px]">
-				<p class="font-medium uppercase"><strong>ATENCIÓN</strong> PERSONALIZADA Y CERCANA</p>
-				<p class="font-medium uppercase"><strong>INFORMACIÓN</strong> CLARA PARA DECIDIR</p>
-				<p class="font-medium uppercase"><strong>ENFOQUE</strong> PREVENTIVO Y ESTRATÉGICO</p>
-				<p class="font-medium uppercase"><strong>CUMPLIMIENTO</strong> OPORTUNO DE OBLIGACIONES</p>
-				<p class="font-medium uppercase"><strong>HONORARIOS</strong> COMPETITIVOS Y TRANSPARENTES</p>
+			<div class="flex flex-col w-full gap-2 md:gap-3 text-sm md:text-[24px]">
+				<p class="font-medium uppercase text-center md:text-left"><strong>ATENCIÓN</strong> PERSONALIZADA Y CERCANA</p>
+				<p class="font-medium uppercase text-center md:text-left"><strong>INFORMACIÓN</strong> CLARA PARA DECIDIR</p>
+				<p class="font-medium uppercase text-center md:text-left"><strong>ENFOQUE</strong> PREVENTIVO Y ESTRATÉGICO</p>
+				<p class="font-medium uppercase text-center md:text-left"><strong>CUMPLIMIENTO</strong> OPORTUNO DE OBLIGACIONES</p>
+				<p class="font-medium uppercase text-center md:text-left"><strong>HONORARIOS</strong> COMPETITIVOS Y TRANSPARENTES</p>
 			</div>
 
-			<div>
+			<div class="hidden md:block">
 				<Image src={check} alt="check" class="w-80 relative -left-[270px] -top-[80px]"/>
 			</div>
 		</div>
 	</section>
-
-	<section class="relative bg-white" id="equipo">
+	<!-- Sección 1 - Socio Fundador -->
+	<section class="relative bg-white overflow-x-hidden" id="equipo">
 		<div class="w-full flex flex-col lg:flex-row items-center relative">
 
 			<div class="relative w-full lg:w-[50%]">
 				<div class="relative w-full aspect-[4/5] overflow-hidden shadow-2xl border-gray-100">
+					<Image src={fotoSocio} alt="Salvador R. Maldonado Díaz" class="absolute inset-0 w-full h-full object-cover object-top lg:object-center" />
 
-
-
-					<Image src={fotoSocio} alt="Salvador R. Maldonado Díaz" class="absolute inset-0 w-full h-full object-cover" />
-
-					<div class="absolute top-40 left-16 z-10">
-						<p class="text-white font-bold text-[36px] uppercase italic leading-tight">
+					<div class="absolute top-4 md:top-40 left-4 md:left-16 z-10">
+						<p class="text-white font-bold text-xl md:text-[36px] uppercase italic leading-tight">
 							Lic. <br /> Salvador R. <br /> Maldonado <br/> Díaz
 						</p>
 					</div>
 
-
-
-					<div class="absolute bottom-0 w-full py-6 text-center z-10">
-						<p class="text-white uppercase text-[40px]">Socio Fundador</p>
+					<div class="absolute bottom-0 w-full py-3 md:py-6 text-center z-10">
+						<p class="text-white uppercase text-lg md:text-[40px]">Socio Fundador</p>
 					</div>
-
 				</div>
 			</div>
 
 			<div class="hidden lg:block absolute left-[51%] top-[100px] -translate-x-1/2 -translate-y-1/2 z-10">
-				<Image src={flecha} alt="flecha" class="w-36 h-auto" />
+				<Image src={flecha} alt="flecha" class="w-24 lg:w-36 h-auto" />
 			</div>
 
-			<div class="w-full lg:w-[50%] flex flex-col gap-6 pr-11 pb-[100px] text-[20px] text-lila-esco max-w-[730px] text-justify mx-auto">
+			<div class="w-full lg:w-[50%] flex flex-col gap-4 md:gap-6 px-4 md:pr-11 pb-8 md:pb-[100px] text-sm md:text-[20px] text-lila-esco max-w-[730px] text-justify mx-auto mt-6 lg:mt-0">
 				<Image
 					src={star3}
 					alt="star1"
-					class="absolute right-0 -top-44 w-16 md:w-64"
+					class="absolute right-0 -top-44 w-16 md:w-64 opacity-30 md:opacity-100"
 				/>
 
-
-				Profesional contable con más de tres décadas de experiencia en gestión corporativa de primer nivel en Paraguay. Licenciado en Ciencias Contables por la Universidad Católica de Asunción, con formación de posgrado en Contabilidad y Finanzas, incluyendo un Executive MBA en la Universidad Alfonso X El Sabio (España). Durante 33 años lideró el Departamento Contable, la Gerencia Administrativa y la Gerencia General de la Unidad de Servicios Compartidos del Grupo Rieder & Cía., uno de los grupos empresariales más importantes del país, en los sectores automotriz y de infraestructura eléctrica. Actualmente ejerce como Socio Fundador de ESCO Estudio Contable S.R.L., brindando asesoramiento contable, tributario, financiero y societario a empresas, emprendedores y personas. A lo largo de su carrera se ha desempeñado como Síndico en diversas empresas nacionales, garantizando transparencia y control interno. Es socio activo del Colegio de Contadores del Paraguay. Su visión combina rigor técnico, experiencia corporativa y compromiso con el crecimiento de sus clientes.
+				<p class="px-2 md:px-0">
+					Profesional contable con más de tres décadas de experiencia en gestión corporativa de primer nivel en Paraguay. Licenciado en Ciencias Contables por la Universidad Católica de Asunción, con formación de posgrado en Contabilidad y Finanzas, incluyendo un Executive MBA en la Universidad Alfonso X El Sabio (España). Durante 33 años lideró el Departamento Contable, la Gerencia Administrativa y la Gerencia General de la Unidad de Servicios Compartidos del Grupo Rieder & Cía., uno de los grupos empresariales más importantes del país, en los sectores automotriz y de infraestructura eléctrica. Actualmente ejerce como Socio Fundador de ESCO Estudio Contable S.R.L., brindando asesoramiento contable, tributario, financiero y societario a empresas, emprendedores y personas. A lo largo de su carrera se ha desempeñado como Síndico en diversas empresas nacionales, garantizando transparencia y control interno. Es socio activo del Colegio de Contadores del Paraguay. Su visión combina rigor técnico, experiencia corporativa y compromiso con el crecimiento de sus clientes.
+				</p>
 			</div>
 
 		</div>
 	</section>
-	<section class="relative bg-white overflow-hidden">
+
+	<!-- Sección 2 - Socia -->
+	<section class="relative bg-white overflow-x-hidden">
 		<div class="w-full flex flex-col lg:flex-row items-center relative">
 
-			<div class="w-full lg:w-[50%] flex flex-col gap-6 text-[20px]  pb-[100px] text-lila-esco max-w-[635px] text-justify mx-auto">
+			<div class="w-full lg:w-[50%] flex flex-col gap-4 md:gap-6 text-sm md:text-[20px] pb-8 md:pb-[100px] text-lila-esco max-w-[635px] text-justify mx-auto px-4 md:px-0 mt-6 lg:mt-0 order-2 lg:order-1">
 				<Image
 					src={elipse1}
 					alt="star1"
-					class="absolute left-[0px] top-[500px] w-16 md:w-52 z-50"
+					class="absolute left-[0px] top-[500px] w-16 md:w-52 z-50 opacity-30 md:opacity-100"
 				/>
 				<Image
 					src={elipse1}
 					alt="star1"
-					class="absolute left-[0px] top-[200px] w-16 md:w-52 z-50"
+					class="absolute left-[0px] top-[200px] w-16 md:w-52 z-50 opacity-30 md:opacity-100"
 				/>
 				<Image
 					src={star3}
 					alt="star1"
-					class="absolute left-[0px] rotate-180 top-[800px] w-16 md:w-52 z-50 pl-11"
+					class="absolute left-[0px] rotate-180 top-[800px] w-16 md:w-52 z-50 pl-11 opacity-30 md:opacity-100"
 				/>
-				Contadora Pública Nacional egresada de la Universidad Nacional de Asunción, con sólida formación en tributación, costos, presupuestos, auditoría, cumplimiento SEPRELAD y liderazgo empresarial. Integra el equipo fundador de ESCO Estudio Contable S.R.L., donde lidera los servicios de contabilidad, liquidación de impuestos y asesoría a empresas y personas en Paraguay. Especializada en el cumplimiento de obligaciones ante la SET, manejo del régimen de IVA, IRE, IRP y normativa tributaria vigente. Su enfoque práctico y orientado al cliente garantiza información clara y oportuna para la toma de decisiones. Combina conocimiento técnico actualizado con una atención personalizada que distingue a ESCO en el mercado. Comprometida con la excelencia profesional y el acompañamiento cercano a cada cliente en todas las etapas de su negocio.
+				<p class="px-2 md:px-0">
+					Contadora Pública Nacional egresada de la Universidad Nacional de Asunción, con sólida formación en tributación, costos, presupuestos, auditoría, cumplimiento SEPRELAD y liderazgo empresarial. Integra el equipo fundador de ESCO Estudio Contable S.R.L., donde lidera los servicios de contabilidad, liquidación de impuestos y asesoría a empresas y personas en Paraguay. Especializada en el cumplimiento de obligaciones ante la SET, manejo del régimen de IVA, IRE, IRP y normativa tributaria vigente. Su enfoque práctico y orientado al cliente garantiza información clara y oportuna para la toma de decisiones. Combina conocimiento técnico actualizado con una atención personalizada que distingue a ESCO en el mercado. Comprometida con la excelencia profesional y el acompañamiento cercano a cada cliente en todas las etapas de su negocio.
+				</p>
 			</div>
 
 			<div class="hidden lg:block absolute left-[49%] top-[100px] -translate-x-1/2 -translate-y-1/2 z-10">
-				<Image src={flecha} alt="flecha" class="w-36 h-auto rotate-180" />
+				<Image src={flecha} alt="flecha" class="w-24 lg:w-36 h-auto rotate-180" />
 			</div>
 
-			<div class="relative w-full lg:w-[50%]">
-
+			<div class="relative w-full lg:w-[50%] order-1 lg:order-2">
 				<div class="relative w-full aspect-[4/5] overflow-hidden shadow-2xl border-gray-100">
-					<Image src={viviana} alt="Viviana R. Maldonado López" class="absolute inset-0 w-full h-full object-cover" />
+					<Image src={viviana} alt="Viviana R. Maldonado López" class="absolute inset-0 w-full h-full object-cover object-top lg:object-center" />
 
-					<div class="absolute top-40 left-16 z-10">
-						<p class="text-white font-bold text-[36px] uppercase italic leading-tight">
+					<div class="absolute top-4 md:top-40 left-4 md:left-16 z-10">
+						<p class="text-white font-bold text-xl md:text-[36px] uppercase italic leading-tight">
 							C.P. <br /> Viviana R. <br /> Maldonado <br/> López
 						</p>
 					</div>
 
-					<div class="absolute bottom-0 w-full py-6 text-center z-10">
-						<p class="text-white uppercase text-[40px]">Socia</p>
+					<div class="absolute bottom-0 w-full py-3 md:py-6 text-center z-10">
+						<p class="text-white uppercase text-lg md:text-[40px]">Socia</p>
 					</div>
 				</div>
 			</div>
 
-
-
-
 		</div>
 	</section>
+	<section class="max-w-[1550px] mx-auto py-12 md:py-24 bg-white px-4 md:px-6" id="contacto">
+		<div class="flex flex-col justify-between lg:flex-row gap-8 md:gap-16 items-center">
 
-	<section class="max-w-[1550px] mx-auto py-24 bg-white" id="contacto">
-		<div class=" flex flex-col justify-between lg:flex-row gap-16 items-center">
+			<div class="max-w-[443px] w-full">
+				<h2 class="text-2xl md:text-4xl italic font-bold text-lila-esco mb-4 uppercase text-center md:text-left">OPTIMIZÁ TUS IMPUESTOS <strong>HOY</strong></h2>
+				<p class="text-lila-esco mb-6 md:mb-8 text-base md:text-[20px] text-center md:text-left">Queremos ser aliados estratégicos en el crecimiento y control financiero de tu empresa.</p>
 
-			<div class="max-w-[443px]">
-				<h2 class="text-4xl italic font-bold text-lila-esco mb-4 uppercase">OPTIMIZÁ TUS IMPUESTOS <strong>HOY</strong></h2>
-				<p class="text-lila-esco mb-8 text-[20px]">Queremos ser aliados estratégicos en el crecimiento y control financiero de tu empresa.</p>
+				<form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-4">
 
-				<form class="flex flex-col gap-4">
+					<input type="hidden" name="access_key" value="7d1fdf7a-5971-4335-866e-23e7c9592352" />
+
+					<input type="hidden" name="subject" value="Nuevo contacto desde la Web - ESCO" />
+					<input type="hidden" name="from_name" value="Web ESCO Estudio Contable" />
+
 					<input
 						type="text"
+						name="nombre_apellido"
+						required
 						placeholder="Nombre y Apellido"
-						class="w-full p-4 rounded-full h-[40px] border-2 border-lila-esco focus:outline-none transition-all placeholder:text-lila-esco"
+						class="w-full px-4 rounded-full h-[40px] border-2 border-lila-esco focus:outline-none transition-all placeholder:text-lila-esco placeholder:text-sm"
 					/>
 
-					<div class="flex gap-4">
+					<div class="flex flex-col sm:flex-row gap-4">
 						<input
 							type="tel"
+							name="telefono"
+							required
 							placeholder="Tel:"
-							class="w-1/2 px-4 h-[40px] text-lila-esco rounded-full border-2 border-lila-esco focus:outline-none transition-all placeholder:text-lila-esco"
+							class="w-full sm:w-1/2 px-4 h-[40px] text-lila-esco rounded-full border-2 border-lila-esco focus:outline-none transition-all placeholder:text-lila-esco placeholder:text-sm"
 						/>
 						<input
 							type="email"
+							name="email"
+							required
 							placeholder="Email"
-							class="w-1/2 p-4  h-[40px] rounded-full border-2 border-lila-esco focus:outline-none transition-all placeholder:text-lila-esco"
+							class="w-full sm:w-1/2 px-4 h-[40px] rounded-full border-2 border-lila-esco focus:outline-none transition-all placeholder:text-lila-esco placeholder:text-sm"
 						/>
 					</div>
 
 					<textarea
+						name="mensaje"
+						required
 						placeholder="Mensaje"
 						rows="4"
-						class="w-full p-4 rounded-3xl border-2 border-lila-esco focus:outline-none transition-all placeholder:text-lila-esco"
+						class="w-full p-4 rounded-3xl border-2 border-lila-esco focus:outline-none transition-all placeholder:text-lila-esco placeholder:text-sm"
 					></textarea>
 
-					<button type="submit" class="bg-lila-esco h-[40px] text-white px-10 rounded-full hover:bg-opacity-90 transition-all w-max text-[20px] shadow-lg leading-none">
+					<button type="submit" class="bg-lila-esco h-[40px] text-white px-6 md:px-10 rounded-full hover:bg-opacity-90 transition-all w-max text-sm md:text-[20px] shadow-lg leading-none inline-flex items-center justify-center mx-auto md:mx-0">
 						Enviar
 					</button>
 				</form>
 			</div>
 
 			<div class="w-full lg:w-1/2 flex flex-col items-center">
-				<h2 class="text-[40px] text-lila-esco mb-6 self-start italic">¡Encontranos <strong>aquí!</strong></h2>
+				<h2 class="text-2xl md:text-[40px] text-lila-esco mb-4 md:mb-6 self-start italic text-center md:text-left w-full">¡Encontranos <strong>aquí!</strong></h2>
 
 				<div class="relative w-full aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-100 group">
 					<Image
@@ -387,7 +397,7 @@ const servicios = [
 					/>
 
 					<div class="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-						<a href="https://maps.google.com" target="_blank" class="bg-white text-lila-esco px-6 py-2 rounded-full font-bold shadow-xl">
+						<a href="https://maps.google.com" target="_blank" class="bg-white text-lila-esco px-4 md:px-6 py-2 rounded-full font-bold shadow-xl text-sm md:text-base">
 							Abrir en Google Maps
 						</a>
 					</div>
@@ -414,3 +424,79 @@ const servicios = [
 		</div>
 	</footer>
 </Layout>
+
+<style is:global>
+	/* Prevenir scroll horizontal */
+	html, body {
+		overflow-x: hidden;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	/* Centrar en móvil - solo para elementos problemáticos */
+	@media (max-width: 768px) {
+		/* Corregir left-39 del título */
+		.left-39 {
+			left: 0 !important;
+		}
+
+		/* Reducir padding en móvil */
+		.px-16 {
+			padding-left: 1rem !important;
+			padding-right: 1rem !important;
+		}
+
+		/* Ajustar márgenes negativos */
+		.-mt-72 {
+			margin-top: -8rem !important;
+		}
+
+		/* Contenedor principal */
+		.marg {
+			margin-left: auto !important;
+			margin-right: auto !important;
+			padding-left: 1rem !important;
+			padding-right: 1rem !important;
+		}
+
+		/* Centrar texto en misión/visión */
+		.grid-cols-1 {
+			text-align: center !important;
+		}
+
+		/* Ajustar valores en móvil */
+		.text-\[24px\] {
+			font-size: 12px !important;
+		}
+
+		/* Posiciones de los valores */
+		.top-\[190px\], .top-\[80px\], .top-\[5px\] {
+			white-space: nowrap;
+		}
+	}
+
+	/* Clase marg si no existe */
+	.marg {
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+</style>
+
+<style is:global>
+	.responsive-title {
+		font-size: clamp(28px, 6vw, 70px);
+	}
+	.responsive-crecer {
+		font-size: clamp(20px, 4vw, 70px);
+	}
+
+	@media (min-width: 768px) {
+		.responsive-title {
+			font-size: clamp(50px, 5vw, 70px);
+		}
+		.responsive-crecer {
+			font-size: clamp(35px, 4vw, 70px);
+		}
+	}
+</style>
