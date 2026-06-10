@@ -2,22 +2,34 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Not found" description="Página no encontrada">
-    <h1>404 - Página no encontrada</h1>
+<Layout title="Redirigiendo..." description="Redirigiendo a la página principal">
+    <script>
+        // Redirección automática después de 0 segundos
+        window.location.href = '/';
+    </script>
 
-    <a href="/">Volver</a>
+    <div class="min-h-screen flex items-center justify-center bg-gray-50">
+        <div class="text-center">
+            <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-lila-esco border-t-transparent"></div>
+            <p class="mt-4 text-lila-esco font-medium">Redirigiendo al inicio...</p>
+            <p class="mt-2 text-sm text-gray-500">Si no eres redirigido automáticamente, <a href="/" class="text-lila-esco underline">haz clic aquí</a></p>
+        </div>
+    </div>
 </Layout>
 
-<style>
-    h1 {
-        text-align: center;
+<style is:global>
+    .lila-esco {
+        color: #4a1d4a;
     }
-    a {
-        display: block;
-        text-align: center;
-        background: rebeccapurple;
-        color: #fff;
-        padding: 1rem;
-        text-decoration: none;
+    .border-lila-esco {
+        border-color: #4a1d4a;
+    }
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    .animate-spin {
+        animation: spin 1s linear infinite;
     }
 </style>
