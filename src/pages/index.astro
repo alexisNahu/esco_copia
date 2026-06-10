@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Banner from "../components/Banner.astro";
 import Nav from "../components/Nav.astro";
 import flecha from '../assets/flecha.png'
+import calculadora from '../assets/calculadora.png'
+import check from '../assets/check.png'
 import {Image} from "astro:assets";
 import logo from '../assets/logo_blanco.png';
 import profesional from '../assets/seniora.png'
@@ -112,14 +114,14 @@ const servicios = [
 					<Image
 						src={star1}
 						alt="star1"
-						class="absolute -top-10 right-[1360px] w-16 md:w-56"
+						class="absolute -top-10 right-[1450px] w-16 md:w-56"
 					/>
 				</h1>
 			</div>
 		</div>
 	</section>
 
-	<section class="py-20 px-6 bg-white">
+	<section class="py-20 px-6 bg-white" id="nosotros">
 		<div class="marg text-lila-esco mx-auto grid grid-cols-1 md:text-[20px] md:grid-cols-2 gap-16">
 			<div class="flex flex-col gap-4">
 				<h2 class="text-4xl font-semibold md:text-[60px] uppercase tracking-wide">Misión</h2>
@@ -164,14 +166,14 @@ const servicios = [
 		</div>
 	</section>
 
-	<section class="py-20 px-6 bg-lila-esco">
+	<section class="py-20 px-6 bg-lila-esco" id="servicios">
 		<div class="marg mx-auto">
 			<h2 class="text-5xl font-extrabold text-white uppercase text-center mb-16 tracking-wide">
 				Servicios
 			</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+			<div class="flex flex-wrap justify-items-center justify-center">
 				{servicios.map((servicio) => (
-					<div class="border-2 border-white/20 rounded-3xl p-8 hover:bg-white/5 transition-all w-full max-w-md">
+					<div class="border-2 border-white/20 rounded-3xl p-8 hover:bg-white/5 transition-all w-full max-w-md mx-2 mb-16">
 						<div class="mb-6 border-2 border-white/20 rounded-[100px] relative bottom-[80px] w-fit px-6 py-3 bg-lila-esco">
 							<Image
 								src={servicio.icono}
@@ -197,36 +199,50 @@ const servicios = [
 		</div>
 	</section>
 
-	<section class="py-24 px-6 bg-slate-50">
-		<div class="marg mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-			<h2 class="text-6xl font-extrabold text-lila-esco uppercase leading-tight">
-				¿Por qué <br /> elegirnos?
+	<section class="relative py-24 px-6 overflow-hidden">
+		<!-- Imagen a la derecha, sin overlay -->
+		<img
+			src="/src/assets/calculadora.png"
+			alt=""
+			class="absolute right-0 top-0 h-full w-auto object-cover pointer-events-none"
+		/>
+
+		<div class="marg mx-auto flex flex-row gap-20 items-center relative z-10">
+			<h2 class="text-6xl md:text-[60px] italic text-lila-esco uppercase leading-tight">
+				¿Por qué <br /> <span class="font-bold">elegirnos?</span>
 			</h2>
-			<div class="flex flex-col w-full">
-				<p class="flex items-center gap-4 text-lg font-medium text-gray-700 uppercase">
+
+			<div class="flex flex-col w-full gap-3 text-[24px]">
+				<p class="font-medium uppercase">
 					<strong>ATENCIÓN</strong> PERSONALIZADA Y CERCANA
 				</p>
-				<p class="flex items-center gap-4 text-lg font-medium text-gray-700 uppercase">
+				<p class=" font-medium uppercase">
 					<strong>INFORMACIÓN</strong> CLARA PARA DECIDIR
 				</p>
-				<p class="flex items-center gap-4 text-lg font-medium text-gray-700 uppercase">
+				<p class="font-medium uppercase">
 					<strong>ENFOQUE</strong> PREVENTIVO Y ESTRATÉGICO
 				</p>
-				<p class="flex items-center gap-4 text-lg font-medium text-gray-700 uppercase">
+				<p class="font-medium uppercase">
 					<strong>CUMPLIMIENTO</strong> OPORTUNO DE OBLIGACIONES
 				</p>
-				<p class="flex items-center gap-4 text-lg font-medium text-gray-700 uppercase">
+				<p class="font-medium uppercase">
 					<strong>HONORARIOS</strong> COMPETITIVOS Y TRANSPARENTES
 				</p>
+			</div>
+			<div>
+				<Image src={check} alt="check" class="relative -top-[90px] right-[90px] w-56"/>
 			</div>
 		</div>
 	</section>
 
-	<section class="relative bg-white overflow-hidden">
+	<section class="relative bg-white" id="equipo">
 		<div class="w-full flex flex-col lg:flex-row items-center relative">
 
 			<div class="relative w-full lg:w-[50%]">
 				<div class="relative w-full aspect-[4/5] overflow-hidden shadow-2xl border-gray-100">
+
+
+
 					<Image src={fotoSocio} alt="Salvador R. Maldonado Díaz" class="absolute inset-0 w-full h-full object-cover" />
 					<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
 
@@ -236,9 +252,12 @@ const servicios = [
 						</p>
 					</div>
 
+
+
 					<div class="absolute bottom-0 w-full py-6 text-center z-10">
 						<p class="text-white tracking-[0.2em] uppercase text-xl font-medium">Socio Fundador</p>
 					</div>
+
 				</div>
 			</div>
 
@@ -247,6 +266,13 @@ const servicios = [
 			</div>
 
 			<div class="w-full lg:w-[50%] flex flex-col gap-6 text-[20px] text-lila-esco max-w-[635px] justify-center text-justify mx-auto">
+				<Image
+					src={star1}
+					alt="star1"
+					class="absolute rotate-180 right-0 -top-24 w-16 md:w-52"
+				/>
+
+
 				Profesional contable con más de tres décadas de experiencia en gestión corporativa de primer nivel en Paraguay. Licenciado en Ciencias Contables por la Universidad Católica de Asunción, con formación de posgrado en Contabilidad y Finanzas, incluyendo un Executive MBA en la Universidad Alfonso X El Sabio (España). Durante 33 años lideró el Departamento Contable, la Gerencia Administrativa y la Gerencia General de la Unidad de Servicios Compartidos del Grupo Rieder & Cía., uno de los grupos empresariales más importantes del país, en los sectores automotriz y de infraestructura eléctrica. Actualmente ejerce como Socio Fundador de ESCO Estudio Contable S.R.L., brindando asesoramiento contable, tributario, financiero y societario a empresas, emprendedores y personas. A lo largo de su carrera se ha desempeñado como Síndico en diversas empresas nacionales, garantizando transparencia y control interno. Es socio activo del Colegio de Contadores del Paraguay. Su visión combina rigor técnico, experiencia corporativa y compromiso con el crecimiento de sus clientes.
 			</div>
 
@@ -256,6 +282,21 @@ const servicios = [
 		<div class="w-full flex flex-col lg:flex-row items-center relative">
 
 			<div class="w-full lg:w-[50%] flex flex-col gap-6 text-[20px] text-lila-esco max-w-[635px] text-justify mx-auto">
+				<Image
+					src={elipse1}
+					alt="star1"
+					class="absolute left-[0px] top-[190px] w-16 md:w-52 z-50"
+				/>
+				<Image
+					src={elipse1}
+					alt="star1"
+					class="absolute left-[0px] top-[10px] w-16 md:w-52 z-50"
+				/>
+				<Image
+					src={star1}
+					alt="star1"
+					class="absolute left-[0px] top-[800px] w-16 md:w-52 z-50"
+				/>
 				Contadora Pública Nacional egresada de la Universidad Nacional de Asunción, con sólida formación en tributación, costos, presupuestos, auditoría, cumplimiento SEPRELAD y liderazgo empresarial. Integra el equipo fundador de ESCO Estudio Contable S.R.L., donde lidera los servicios de contabilidad, liquidación de impuestos y asesoría a empresas y personas en Paraguay. Especializada en el cumplimiento de obligaciones ante la SET, manejo del régimen de IVA, IRE, IRP y normativa tributaria vigente. Su enfoque práctico y orientado al cliente garantiza información clara y oportuna para la toma de decisiones. Combina conocimiento técnico actualizado con una atención personalizada que distingue a ESCO en el mercado. Comprometida con la excelencia profesional y el acompañamiento cercano a cada cliente en todas las etapas de su negocio.
 			</div>
 
@@ -267,6 +308,7 @@ const servicios = [
 
 				<div class="relative w-full aspect-[4/5] overflow-hidden shadow-2xl border-gray-100">
 					<Image src={viviana} alt="Viviana R. Maldonado López" class="absolute inset-0 w-full h-full object-cover" />
+
 					<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
 
 					<div class="absolute top-40 left-16 z-10">
@@ -287,7 +329,7 @@ const servicios = [
 		</div>
 	</section>
 
-	<section class="py-24 bg-white">
+	<section class="py-24 bg-white" id="contacto">
 		<div class="marg mx-auto flex flex-col justify-between lg:flex-row gap-16 items-center">
 
 			<div class="max-w-[443px]">

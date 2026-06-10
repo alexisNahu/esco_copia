@@ -3,24 +3,15 @@ import {Image} from "astro:assets";
 import logo from '../assets/logo-esco.png';
 ---
 
-<nav class="flex flex-row items-center justify-between">
+<nav class="marg mx-auto flex flex-row items-center justify-between">
     <div class="flex flex-col items-center">
         <Image src={logo} alt="ESCO Estudio Contable" class="w-[250px]" />
     </div>
 
     <ul class="flex items-center gap-6 text-sm font-semibold md:text-[20px] text-gray-800 uppercase tracking-wide">
-        <li><a href="/nosotros" class="hover:text-lila-esco transition-colors">Nosotros</a></li>
-
-        <li class="border-l border-lila-esco pl-6">
-            <a href="/servicios" class="hover:text-lila-esco transition-colors">Servicios</a>
-        </li>
-
-        <li class="border-l border-lila-esco pl-6">
-            <a href="/equipo" class="hover:text-lila-esco transition-colors">Equipo</a>
-        </li>
-
-        <li class="border-l border-lila-esco pl-6">
-            <a href="/contactos" class="hover:text-lila-esco transition-colors">Contactos</a>
-        </li>
+        <li><a href="#nosotros" class="hover:text-lila-esco transition-colors">Nosotros</a></li>
+        <li class="border-l border-lila-esco pl-6"><a href="#servicios" class="hover:text-lila-esco transition-colors">Servicios</a></li>
+        <li class="border-l border-lila-esco pl-6"><a href="#equipo" class="hover:text-lila-esco transition-colors">Equipo</a></li>
+        <li class="border-l border-lila-esco pl-6"><a href="#contacto" class="hover:text-lila-esco transition-colors">Contactos</a></li>
     </ul>
 </nav>
