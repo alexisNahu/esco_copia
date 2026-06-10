@@ -57,36 +57,31 @@ const servicios = [
 <Layout>
 	<Banner/>
 
-	<!--<section class="bg-gray-50 py-8 px-10 -mt-[585px] bg-transparent z-10 relative">
+	<section class="bg-gray-50 -mt-[585px] bg-transparent z-10 relative">
 		<div class="flex items-center">
-			<Image src={flecha} alt="Flecha" />
+			<Image src={flecha} alt="Flecha" class="relative -left-10"/>
 
-			<div class="flex flex-row justify-between w-full px-16">
+			<div class="flex flex-row justify-between w-full px-16 items-center">
 				<div class="flex items-center justify-between gap-8">
 					<h2 class="text-3xl md:text-[45px] text-lila-esco uppercase">
-						Tu tranquilidad fiscal, <br /> <span class="font-bold">nuestro compromiso</span>
 					</h2>
 				</div>
 
 				<a
 					href="https://wa.me/TUNUMERO"
 					target="_blank"
-					class="border-2 border-lila-esco text-lila-esco px-16 md:text-[32px] py-6 rounded-full hover:bg-lila-esco hover:text-white transition-all"
+					class="border-2 border-lila-esco max-h-[60px] px-6 text-lila-esco md:text-[32px] rounded-full hover:bg-lila-esco hover:text-white transition-all"
 				>
 					Hablemos por <span class="font-bold">WhatsApp</span>
 				</a>
 			</div>
 		</div>
-	</section>-->
-
-	<section class="bg-gray-50 py-8 px-10 -mt-[350px] bg-transparent z-10 relative">
-		<div class="marg mx-auto flex items-center">
-			<Image src={flecha} alt="Flecha" class="absolute  left-0"/>
-		</div>
 	</section>
 
 
-	<section class="py-6 bg-lila-esco px-6 mt-11" id="nosotros">
+
+
+	<section class="py-6 bg-lila-esco px-6 mt-26" id="nosotros">
 		<div class="max-w-[1170px] text-justify mx-auto md:text-[24px]">
 			<p class="text-white text-lg md:text-[24px] leading-relaxed">
 				<strong class="font-bold">ESCO - Estudio Contable S.R.L.</strong> nace a partir de la sólida trayectoria profesional de sus fundadores, quienes han desarrollado durante años una destacada labor en el asesoramiento contable, tributario y financiero a empresas de diversos sectores económicos.
@@ -95,8 +90,8 @@ const servicios = [
 		</div>
 	</section>
 
-	<section class="relative w-full py-20 flex items-center h-[1100px]">
-		<div class="absolute left-20 top-0 h-full z-0 hidden md:block">
+	<section class="relative w-full flex items-center h-[1100px] overflow-hidden">
+		<div class="absolute left-20 -top-[350px] h-full z-0 hidden md:block">
 			<Image
 				src={profesional}
 				alt="Profesional contable"
@@ -106,7 +101,7 @@ const servicios = [
 
 
 
-		<div class="marg mx-auto relative z-10 w-full px-10 left-39 -top-[70px]">
+		<div class="marg mx-auto relative z-10 w-full px-10 left-39 -top-[200px]">
 			<div>
 				<h1 class="text-[95px] uppercase leading-tight text-lila-esco relative">
 					<span class="italic font-bold border-b-1">Transformamos</span> <br />
@@ -127,19 +122,19 @@ const servicios = [
 		<Image
 			src={star1}
 			alt="star1"
-			class="absolute -bottom-36 w-16 md:w-80"
+			class="absolute bottom-50 -left-[100px] w-16 md:w-80"
 		/>
 
 		<Image
 			src={star2}
 			alt="star1"
-			class="absolute right-0 -bottom-36 w-16 md:w-36"
+			class="absolute right-0 bottom-80 w-16 md:w-36"
 		/>
 	</section>
 
 
 
-	<section class="py-20 px-6 bg-white">
+	<section class="py-20 px-6 bg-white -mt-72">
 		<div class="max-w-[1200px] text-lila-esco mx-auto w-full justify-items-center grid grid-cols-1 md:text-[20px] md:grid-cols-2 gap-16">
 			<div class="flex flex-col gap-4">
 				<h2 class="text-4xl font-semibold md:text-[60px] uppercase tracking-wide">Misión</h2>
