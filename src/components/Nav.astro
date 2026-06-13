@@ -13,12 +13,12 @@ import logo from '../assets/logo-esco.png';
 
         <button
                 id="menu-toggle"
-                class="flex flex-col gap-1.5 z-50 md:hidden p-3 -mr-2 focus:outline-none"
+                class="relative flex flex-col gap-1.5 z-50 md:hidden ml-auto mr-2 focus:outline-none w-20 h-14 items-center justify-center"
                 aria-label="Abrir menú"
         >
-            <div class="w-6 h-0.5 bg-lila-esco transition-all duration-300 line1"></div>
-            <div class="w-6 h-0.5 bg-lila-esco transition-all duration-300 line2"></div>
-            <div class="w-6 h-0.5 bg-lila-esco transition-all duration-300 line3"></div>
+            <div class="w-5 h-0.5 bg-lila-esco transition-all duration-300 origin-center line1"></div>
+            <div class="w-5 h-0.5 bg-lila-esco transition-all duration-300 line2"></div>
+            <div class="w-5 h-0.5 bg-lila-esco transition-all duration-300 origin-center line3"></div>
         </button>
 
         <ul
@@ -63,11 +63,15 @@ import logo from '../assets/logo-esco.png';
         }
 
         // Animación de las líneas para formar la "X"
-        menuToggle.querySelector('.line1').classList.toggle('rotate-45');
-        menuToggle.querySelector('.line1').classList.toggle('translate-y-2');
-        menuToggle.querySelector('.line2').classList.toggle('opacity-0');
-        menuToggle.querySelector('.line3').classList.toggle('-rotate-45');
-        menuToggle.querySelector('.line3').classList.toggle('-translate-y-2');
+        const line1 = menuToggle.querySelector('.line1');
+        const line2 = menuToggle.querySelector('.line2');
+        const line3 = menuToggle.querySelector('.line3');
+
+        line1.classList.toggle('rotate-45');
+        line1.classList.toggle('translate-y-2');
+        line2.classList.toggle('opacity-0');
+        line3.classList.toggle('-rotate-45');
+        line3.classList.toggle('-translate-y-2');
     }
 
     menuToggle.addEventListener('click', toggleMenu);
@@ -89,9 +93,21 @@ import logo from '../assets/logo-esco.png';
         transform: rotate(-45deg);
     }
     .translate-y-2 {
-        transform: translateY(8px);
+        transform: translateY(1px);
     }
     .-translate-y-2 {
-        transform: translateY(-8px);
+        transform: translateY(-1px);
+    }
+
+    /* Asegurar que el botón tenga espacio suficiente y no se corte */
+    #menu-toggle {
+        overflow: visible !important;
+    }
+
+    #menu-toggle .line1,
+    #menu-toggle .line2,
+    #menu-toggle .line3 {
+        transform-origin: center;
+        transition: all 0.3s ease;
     }
 </style>

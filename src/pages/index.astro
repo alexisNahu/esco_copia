@@ -230,37 +230,62 @@ const servicios = [
 		</div>
 	</section>
 
-	<section class="py-11 bg-lila-esco w-full overflow-hidden mt-[480px] min-[1510px]:mt-16 max-h-[100vh]" id="servicios">
+	<section class="py-11 bg-lila-esco w-full overflow-hidden mt-[480px] min-[1510px]:mt-16" id="servicios">
 		<div class="max-w-[1750px] mx-auto px-6">
-			<h2 class="animate-fadeInUp text-5xl font-extrabold text-white uppercase text-center mb-9 tracking-wide">
+			<h2 class="animate-fadeInUp text-5xl font-extrabold text-white uppercase text-center mb-16 tracking-wide">
 				Servicios
 			</h2>
 			<div class="flex flex-wrap justify-items-center justify-center -mx-2">
 				{servicios.map((servicio, index) => (
-					<div class={`animate-fadeInUp stagger-${index + 1} border-2 border-white/20 rounded-3xl py-[20px] px-[20px] hover:bg-white/5 transition-all w-full max-w-[520px] mx-2 mb-16 relative`}>
+
+					<div class={`animate-fadeInUp stagger-${index + 1} border-2 border-white/20 rounded-3xl py-[12px] px-3 hover:bg-white/5 transition-all w-full max-w-[520px] mx-2 mb-16 relative`}>
+
+
 
 						<div class="absolute -top-8 left-6 border-2 border-white/20 rounded-full px-6 py-3 bg-lila-esco">
+
 							<Image
+
 								src={servicio.icono}
+
 								alt={servicio.titulo}
+
 								class="w-16 h-16 object-contain"
+
 							/>
+
 						</div>
+
+
 
 						<div class="mt-10 flex flex-col">
+
 							<h3 class="text-2xl md:text-[24px] font-black text-white uppercase mb-4 leading-tight h-[90px] text-center max-w-[250px] mx-auto">
+
 								{servicio.titulo}
+
 							</h3>
 
+
+
 							<ul class="space-y-3">
+
 								{servicio.items.map((item) => (
+
 									<li class="text-white/80 flex text-[20px] items-center gap-2">
+
 										<Image src={se} alt="estrellita servicio" class="w-3 h-3 m-0" /> {item}
+
 									</li>
+
 								))}
+
 							</ul>
+
 						</div>
+
 					</div>
+
 				))}
 			</div>
 		</div>
@@ -287,13 +312,13 @@ const servicios = [
 			</div>
 		</div>
 	</section>
-
+	<!-- Sección 1 - Socio Fundador (SIN ANIMACIONES) -->
 	<section class="relative bg-white overflow-x-hidden" id="equipo">
 		<div class="w-full flex flex-col lg:flex-row items-center relative">
 
-			<div class="relative w-full lg:w-[50%] animate-slideInLeft">
+			<div class="relative w-full lg:w-[50%]">
 				<div class="relative w-full aspect-[4/5] overflow-hidden shadow-2xl border-gray-100">
-					<Image src={fotoSocio} alt="Salvador R. Maldonado Díaz" class="absolute inset-0 w-full h-full object-cover object-top lg:object-center transition-transform duration-700 hover:scale-105" />
+					<Image src={fotoSocio} alt="Salvador R. Maldonado Díaz" class="absolute inset-0 w-full h-full object-cover object-top lg:object-center" />
 
 					<div class="absolute top-4 md:top-40 left-4 md:left-16 z-10">
 						<p class="text-white font-bold text-xl md:text-[36px] uppercase italic leading-tight">
@@ -308,14 +333,14 @@ const servicios = [
 			</div>
 
 			<div class="hidden lg:block absolute left-[51%] top-[100px] -translate-x-1/2 -translate-y-1/2 z-10">
-				<Image src={flecha} alt="flecha" class="animate-slideInRight w-24 lg:w-36 h-auto" />
+				<Image src={flecha} alt="flecha" class="w-24 lg:w-36 h-auto" />
 			</div>
 
-			<div class="w-full lg:w-[50%] flex flex-col gap-4 md:gap-6 px-4 md:pr-11 pb-8 md:pb-[100px] text-sm md:text-[20px] text-lila-esco max-w-[730px] text-justify mx-auto mt-6 lg:mt-0 animate-fadeInRight">
+			<div class="w-full lg:w-[50%] flex flex-col gap-4 md:gap-6 px-4 md:pr-11 pb-8 md:pb-[100px] text-sm md:text-[20px] text-lila-esco max-w-[730px] text-justify mx-auto mt-6 lg:mt-0">
 				<Image
 					src={star3}
 					alt="star1"
-					class="animate-spinSlow absolute right-0 -top-44 w-16 md:w-64 opacity-30 md:opacity-100"
+					class="absolute right-0 -top-44 w-16 md:w-64 opacity-30 md:opacity-100"
 				/>
 
 				<p class="px-2 md:px-0">
@@ -326,24 +351,25 @@ const servicios = [
 		</div>
 	</section>
 
+	<!-- Sección 2 - Socia (SIN ANIMACIONES) -->
 	<section class="relative bg-white overflow-x-hidden">
 		<div class="w-full flex flex-col lg:flex-row items-center relative">
 
-			<div class="w-full lg:w-[50%] flex flex-col gap-4 md:gap-6 text-sm md:text-[20px] pb-8 md:pb-[100px] text-lila-esco max-w-[635px] text-justify mx-auto px-4 md:px-0 mt-6 lg:mt-0 order-2 lg:order-1 animate-fadeInLeft">
+			<div class="w-full lg:w-[50%] flex flex-col gap-4 md:gap-6 text-sm md:text-[20px] pb-8 md:pb-[100px] text-lila-esco max-w-[635px] text-justify mx-auto px-4 md:px-0 mt-6 lg:mt-0 order-2 lg:order-1">
 				<Image
 					src={elipse1}
 					alt="star1"
-					class="animate-pulseSlow absolute left-[0px] top-[500px] w-16 md:w-52 z-50 opacity-30 md:opacity-100"
+					class="absolute left-[0px] top-[500px] w-16 md:w-52 z-50 opacity-30 md:opacity-100"
 				/>
 				<Image
 					src={elipse1}
 					alt="star1"
-					class="animate-pulseSlow absolute left-[0px] top-[200px] w-16 md:w-52 z-50 opacity-30 md:opacity-100"
+					class="absolute left-[0px] top-[200px] w-16 md:w-52 z-50 opacity-30 md:opacity-100"
 				/>
 				<Image
 					src={star3}
 					alt="star1"
-					class="animate-spinSlow absolute left-[0px] rotate-180 top-[800px] w-16 md:w-52 z-50 pl-11 opacity-30 md:opacity-100"
+					class="absolute left-[0px] rotate-180 top-[800px] w-16 md:w-52 z-50 pl-11 opacity-30 md:opacity-100"
 				/>
 				<p class="px-2 md:px-0">
 					Contadora Pública Nacional egresada de la Universidad Nacional de Asunción, con sólida formación en tributación, costos, presupuestos, auditoría, cumplimiento SEPRELAD y liderazgo empresarial. Integra el equipo fundador de ESCO Estudio Contable S.R.L., donde lidera los servicios de contabilidad, liquidación de impuestos y asesoría a empresas y personas en Paraguay. Especializada en el cumplimiento de obligaciones ante la SET, manejo del régimen de IVA, IRE, IRP y normativa tributaria vigente. Su enfoque práctico y orientado al cliente garantiza información clara y oportuna para la toma de decisiones. Combina conocimiento técnico actualizado con una atención personalizada que distingue a ESCO en el mercado. Comprometida con la excelencia profesional y el acompañamiento cercano a cada cliente en todas las etapas de su negocio.
@@ -351,12 +377,12 @@ const servicios = [
 			</div>
 
 			<div class="hidden lg:block absolute left-[49%] top-[100px] -translate-x-1/2 -translate-y-1/2 z-10">
-				<Image src={flecha} alt="flecha" class="animate-slideInLeft w-24 lg:w-36 h-auto rotate-180" />
+				<Image src={flecha} alt="flecha" class="w-24 lg:w-36 h-auto rotate-180" />
 			</div>
 
-			<div class="relative w-full lg:w-[50%] order-1 lg:order-2 animate-slideInRight">
+			<div class="relative w-full lg:w-[50%] order-1 lg:order-2">
 				<div class="relative w-full aspect-[4/5] overflow-hidden shadow-2xl border-gray-100">
-					<Image src={viviana} alt="Viviana R. Maldonado López" class="absolute inset-0 w-full h-full object-cover object-top lg:object-center transition-transform duration-700 hover:scale-105" />
+					<Image src={viviana} alt="Viviana R. Maldonado López" class="absolute inset-0 w-full h-full object-cover object-top lg:object-center" />
 
 					<div class="absolute top-4 md:top-40 left-4 md:left-16 z-10">
 						<p class="text-white font-bold text-xl md:text-[36px] uppercase italic leading-tight">
