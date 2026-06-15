@@ -61,7 +61,7 @@ const servicios = [
 		<div class="flex items-center">
 			<Image src={flecha} alt="Flecha" class="animate-slideInLeft relative -left-10 hidden md:flex"/>
 
-			<div class="flex flex-row justify-center md:justify-between w-full px-16 items-center">
+			<div class="flex flex-row justify-center md:justify-between w-full px-26 items-center">
 				<div class="items-center justify-between gap-8 hidden md:flex">
 					<h2 class="text-3xl md:text-[45px] text-lila-esco uppercase">
 					</h2>
@@ -231,7 +231,7 @@ const servicios = [
 	</section>
 
 	<section class="py-11 bg-lila-esco w-full overflow-hidden mt-[480px] min-[1510px]:mt-16" id="servicios">
-		<div class="max-w-[1750px] mx-auto px-6">
+		<div class="marg mx-auto px-6">
 			<h2 class="animate-fadeInUp text-5xl font-extrabold text-white uppercase text-center mb-16 tracking-wide">
 				Servicios
 			</h2>
@@ -294,7 +294,7 @@ const servicios = [
 	<section class="relative h-auto bg-cover py-11 bg-center bg-no-repeat w-full overflow-hidden bg-[url('../assets/calculadora.png')] bg-cover bg-center">
 		<div class="absolute inset-0 bg-white/70 md:bg-transparent"></div>
 
-		<div class="md:max-w-[1550px] mx-auto flex flex-col md:flex-row gap-6 md:gap-20 items-center justify-center min-h-[410px] relative z-10 font-bold py-10 md:py-0 px-4 md:px-6">
+		<div class="md:max-w-[1550px] mx-auto flex flex-col md:flex-row gap-6 md:gap-20 items-center lg:justify-center justify-between min-h-[410px] relative z-10 font-bold py-10 md:py-0 px-4 md:px-6">
 			<h2 class="animate-slideInLeft text-3xl md:text-6xl italic text-lila-esco uppercase leading-tight font-bold text-center md:text-left">
 				¿Por qué <br /> <strong>elegirnos?</strong>
 			</h2>
@@ -307,7 +307,7 @@ const servicios = [
 				<p class="animate-fadeInRight stagger-5 font-medium uppercase text-center md:text-left"><strong>HONORARIOS</strong> COMPETITIVOS Y TRANSPARENTES</p>
 			</div>
 
-			<div class="hidden md:block">
+			<div class="hidden lg:block">
 				<Image src={check} alt="check" class="animate-bounceSlow w-80 relative -left-[270px] -top-[80px]"/>
 			</div>
 		</div>
@@ -336,7 +336,7 @@ const servicios = [
 				<Image src={flecha} alt="flecha" class="w-24 lg:w-[210px] h-auto" />
 			</div>
 
-			<div class="w-full lg:w-[50%] flex flex-col gap-4 md:gap-6 px-4 md:pr-11 pb-8 text-sm  md:max-w-[650px] md:text-[20px] text-lila-esco text-justify mx-auto mt-6 lg:mt-0 lg:overflow-y-auto lg:max-h-screen">
+			<div class="w-full lg:w-[50%] flex flex-colgap-4 md:gap-6 px-4 pb-8 text-sm  lg:max-w-[650px] md:text-[20px] text-lila-esco text-justify mx-auto mt-6 lg:mt-0 lg:overflow-y-auto lg:max-h-screen">
 				<Image
 					src={star3}
 					alt="star1"
@@ -355,7 +355,7 @@ const servicios = [
 	<section class="relative bg-white lg:max-h-screen">
 		<div class="w-full flex flex-col lg:flex-row items-center relative">
 
-			<div class="w-full lg:w-[50%] flex flex-col gap-4 md:gap-6 text-sm md:text-[20px] md:max-w-[600px] pb-8 md:pb-[100px] text-lila-esco text-justify mx-auto px-4 md:px-0 mt-6 lg:mt-0 order-2 lg:order-1">
+			<div class="w-full lg:w-[50%] flex flex-col gap-4 md:gap-6 text-sm md:text-[20px] lg:max-w-[600px] pb-8 md:pb-[100px] text-lila-esco text-justify mx-auto px-4 md:px-0 mt-6 lg:mt-0 order-2 lg:order-1">
 				<Image
 					src={elipse1}
 					alt="star1"
@@ -400,13 +400,13 @@ const servicios = [
 	</section>
 
 
-	<section class="mx-auto py-12 md:py-24 max-w-[1600px] bg-white px-4 md:px-6" id="contacto">
+	<section class="mx-auto py-12 md:py-24 lg:max-w-[90%] bg-white px-4 md:px-6" id="contacto">
 		<div class="flex flex-col justify-between lg:flex-row gap-8 md:gap-16 items-center">
 
-			<div class="animate-fadeInLeft max-w-[443px]">
+			<div class="animate-fadeInLeft lg:max-w-[443px]">
 				<h2 class="text-2xl md:text-4xl italic font-bold text-lila-esco mb-4 uppercase text-center md:text-left">OPTIMIZÁ TUS IMPUESTOS <strong>HOY</strong></h2>
 				<p class="text-lila-esco mb-6 md:mb-8 text-base md:text-[20px] text-center md:text-left">Queremos ser aliados estratégicos en el crecimiento y control financiero de tu empresa.</p>
-				<form action="https://api.web3forms.com/submit" method="POST" class="mx-auto max-w-[90%] justify-center flex flex-col gap-4">
+				<form action="https://api.web3forms.com/submit" method="POST" class="mx-auto lg:max-w-[100%] justify-center flex flex-col gap-4">
 					<input type="hidden" name="title" value="Notificación: Nuevo formulario de contacto recibido - ESCO Estudio Contable" />					<input type="hidden" name="access_key" value="7d1fdf7a-5971-4335-866e-23e7c9592352" />
 					<input type="hidden" name="subject" value="Nuevo contacto desde la Web - ESCO" />
 					<input type="hidden" name="from_name" value="Web ESCO Estudio Contable" />
@@ -454,7 +454,7 @@ const servicios = [
 				</form>
 			</div>
 
-			<div class="animate-fadeInRight w-full lg:w-1/2 flex flex-col items-center">
+			<div class="animate-fadeInRight w-full lg:w-1/2 flex flex-col items-center max-w-[90%]">
 				<h2 class="text-2xl md:text-[40px] text-lila-esco mb-4 md:mb-6 self-start italic text-center md:text-left w-full">¡Encontranos <strong>aquí!</strong></h2>
 
 				<div class="relative w-full aspect-[2/1] rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-100 group">
@@ -470,7 +470,7 @@ const servicios = [
 		</div>
 	</section>
 
-	<footer class="bg-[#4a1d4a] py-12 px-6 text-white">
+	<footer class="bg-[#4a1d4a] py-12 px-6 text-white ">
 		<div class="marg mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
 
 			<div class="flex flex-col items-center md:items-end gap-2">
