@@ -313,34 +313,34 @@ const servicios = [
 		</div>
 	</section>
 	<!-- Sección 1 - Socio Fundador (SIN ANIMACIONES) -->
-	<section class="relative bg-white md:overflow-hidden lg:max-h-screen" id="equipo">
+	<section class="relative bg-white lg:max-h-screen" id="equipo">
 		<div class="w-full flex flex-col lg:flex-row items-center relative lg:h-screen">
 
 			<div class="relative w-full lg:w-[50%] lg:h-full">
-				<div class="relative w-full aspect-[4/5] lg:aspect-auto lg:h-full overflow-hidden shadow-2xl border-gray-100">
+				<div class="relative w-full aspect-[4/5] lg:aspect-auto h-full overflow-hidden shadow-2xl border-gray-100">
 					<Image src={fotoSocio} alt="Salvador R. Maldonado Díaz" class="absolute inset-0 w-full h-full object-cover object-top lg:object-center" />
 
 					<div class="absolute top-4 md:top-40 left-4 md:left-26 z-10">
-						<p class="text-white font-bold text-xl md:text-[36px] uppercase italic leading-tight">
+						<p class="text-white font-bold md:mt-0 mt-19 text-3xl md:text-[36px] uppercase italic leading-tight">
 							Lic. <br /> Salvador R. <br /> Maldonado <br/> Díaz
 						</p>
 					</div>
 
-					<div class="absolute bottom-0 w-full py-3 md:py-6 text-center z-10">
+					<div class="absolute bottom-0 w-full py-1 text-center z-10">
 						<p class="text-white uppercase text-lg md:text-[40px]">Socio Fundador</p>
 					</div>
 				</div>
 			</div>
 
 			<div class="hidden lg:block absolute left-[51%] top-[100px] -translate-x-1/2 -translate-y-1/2 z-10">
-				<Image src={flecha} alt="flecha" class="w-24 lg:w-36 h-auto" />
+				<Image src={flecha} alt="flecha" class="w-24 lg:w-[210px] h-auto" />
 			</div>
 
-			<div class="w-full lg:w-[50%] flex flex-col gap-4 md:gap-6 px-4 md:pr-11 pb-8 text-sm md:text-[20px] text-lila-esco max-w-[730px] text-justify mx-auto mt-6 lg:mt-0 lg:overflow-y-auto lg:max-h-screen">
+			<div class="w-full lg:w-[50%] flex flex-col gap-4 md:gap-6 px-4 md:pr-11 pb-8 text-sm  md:max-w-[650px] md:text-[20px] text-lila-esco text-justify mx-auto mt-6 lg:mt-0 lg:overflow-y-auto lg:max-h-screen">
 				<Image
 					src={star3}
 					alt="star1"
-					class="absolute right-0 -top-44 w-16 md:w-64 opacity-30 md:opacity-100"
+					class="absolute right-0 -top-44 w-16 md:w-64 opacity-30 md:opacity-100 animate-spinSlow animate-float"
 				/>
 
 				<p class="px-2 md:px-0">
@@ -352,10 +352,10 @@ const servicios = [
 	</section>
 
 	<!-- Sección 2 - Socia (SIN ANIMACIONES) -->
-	<section class="relative bg-white md:overflow-hidden max-h-[100vh]">
+	<section class="relative bg-white lg:max-h-screen">
 		<div class="w-full flex flex-col lg:flex-row items-center relative">
 
-			<div class="w-full lg:w-[50%] flex flex-col gap-4 md:gap-6 text-sm md:text-[20px] pb-8 md:pb-[100px] text-lila-esco max-w-[635px] text-justify mx-auto px-4 md:px-0 mt-6 lg:mt-0 order-2 lg:order-1">
+			<div class="w-full lg:w-[50%] flex flex-col gap-4 md:gap-6 text-sm md:text-[20px] md:max-w-[600px] pb-8 md:pb-[100px] text-lila-esco text-justify mx-auto px-4 md:px-0 mt-6 lg:mt-0 order-2 lg:order-1">
 				<Image
 					src={elipse1}
 					alt="star1"
@@ -369,28 +369,28 @@ const servicios = [
 				<Image
 					src={star3}
 					alt="star1"
-					class="absolute left-[0px] rotate-180 top-[800px] w-16 md:w-52 z-50 pl-11 opacity-30 md:opacity-100"
+					class="absolute left-[0px] rotate-180 top-[800px] w-16 md:w-52 z-50 pl-11 opacity-30 animate-spinSlow animate-float md:opacity-100"
 				/>
-				<p class="px-2 md:px-0">
+				<p class="px-2">
 					Contadora Pública Nacional egresada de la Universidad Nacional de Asunción, con sólida formación en tributación, costos, presupuestos, auditoría, cumplimiento SEPRELAD y liderazgo empresarial. Integra el equipo fundador de ESCO Estudio Contable S.R.L., donde lidera los servicios de contabilidad, liquidación de impuestos y asesoría a empresas y personas en Paraguay. Especializada en el cumplimiento de obligaciones ante la SET, manejo del régimen de IVA, IRE, IRP y normativa tributaria vigente. Su enfoque práctico y orientado al cliente garantiza información clara y oportuna para la toma de decisiones. Combina conocimiento técnico actualizado con una atención personalizada que distingue a ESCO en el mercado. Comprometida con la excelencia profesional y el acompañamiento cercano a cada cliente en todas las etapas de su negocio.
 				</p>
 			</div>
 
 			<div class="hidden lg:block absolute left-[49%] top-[100px] -translate-x-1/2 -translate-y-1/2 z-10">
-				<Image src={flecha} alt="flecha" class="w-24 lg:w-36 h-auto rotate-180" />
+				<Image src={flecha} alt="flecha" class="w-24 lg:w-[206px] h-auto rotate-180" />
 			</div>
 
 			<div class="relative w-full lg:w-[50%] order-1 lg:order-2">
-				<div class="relative w-full aspect-[4/5] overflow-hidden shadow-2xl border-gray-100">
-					<Image src={viviana} alt="Viviana R. Maldonado López" class="absolute inset-0 w-full h-full desktop:h-[100vh] object-cover object-top lg:object-center" />
+				<div class="relative w-full aspect-[4/5] lg:aspect-auto lg:h-screen overflow-hidden shadow-2xl border-gray-100">
+					<Image src={viviana} alt="Viviana R. Maldonado López" class="absolute inset-0 w-full h-full object-cover object-top lg:object-center" />
 
 					<div class="absolute top-4 md:top-40 left-4 md:left-26 z-10">
-						<p class="text-white font-bold text-xl md:text-[36px] uppercase italic leading-tight">
+						<p class="text-white font-bold md:mt-0 mt-19 text-3xl md:text-[36px] uppercase italic leading-tight">
 							C.P. <br /> Viviana R. <br /> Maldonado <br/> López
 						</p>
 					</div>
 
-					<div class="absolute bottom-0 w-full py-3 md:py-6 text-center z-10">
+					<div class="absolute bottom-0 w-full py-1 text-center z-10">
 						<p class="text-white uppercase text-lg md:text-[40px]">Socia</p>
 					</div>
 				</div>
@@ -400,13 +400,13 @@ const servicios = [
 	</section>
 
 
-	<section class="max-w-[1550px] mx-auto py-12 md:py-24 bg-white px-4 md:px-6" id="contacto">
+	<section class="mx-auto py-12 md:py-24 max-w-[1600px] bg-white px-4 md:px-6" id="contacto">
 		<div class="flex flex-col justify-between lg:flex-row gap-8 md:gap-16 items-center">
 
-			<div class="animate-fadeInLeft max-w-[443px] w-full">
+			<div class="animate-fadeInLeft max-w-[443px]">
 				<h2 class="text-2xl md:text-4xl italic font-bold text-lila-esco mb-4 uppercase text-center md:text-left">OPTIMIZÁ TUS IMPUESTOS <strong>HOY</strong></h2>
 				<p class="text-lila-esco mb-6 md:mb-8 text-base md:text-[20px] text-center md:text-left">Queremos ser aliados estratégicos en el crecimiento y control financiero de tu empresa.</p>
-				<form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-4">
+				<form action="https://api.web3forms.com/submit" method="POST" class="max-w-[90%] justify-center flex flex-col gap-4">
 					<input type="hidden" name="title" value="Notificación: Nuevo formulario de contacto recibido - ESCO Estudio Contable" />					<input type="hidden" name="access_key" value="7d1fdf7a-5971-4335-866e-23e7c9592352" />
 					<input type="hidden" name="subject" value="Nuevo contacto desde la Web - ESCO" />
 					<input type="hidden" name="from_name" value="Web ESCO Estudio Contable" />
@@ -457,7 +457,7 @@ const servicios = [
 			<div class="animate-fadeInRight w-full lg:w-1/2 flex flex-col items-center">
 				<h2 class="text-2xl md:text-[40px] text-lila-esco mb-4 md:mb-6 self-start italic text-center md:text-left w-full">¡Encontranos <strong>aquí!</strong></h2>
 
-				<div class="relative w-full aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-100 group">
+				<div class="relative w-full aspect-[2/1] rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-100 group">
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.1258039600707!2d-57.6192299!3d-25.3335592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da9003d592d37%3A0x99373c4f8d751508!2sESCO.%20Estudio%20Contable!5e0!3m2!1ses!2spy!4v1781127651378!5m2!1ses!2spy"
 						class="w-full h-full border-0"
